@@ -37,9 +37,11 @@ const RegistrationSection = () => {
               </div>
 
               <div className="text-center">
-                <Button variant="hero" size="lg">
-                  Start Selling Today
-                </Button>
+                <a href="https://www.bzzco.com/become-a-seller">
+                  <Button variant="hero" size="lg">
+                    Start Selling Today
+                  </Button>
+                </a>
                 <p className="text-sm text-muted-foreground mt-4">
                   Registration takes less than 10 minutes. Our team will review your application within 24-48 hours.
                 </p>

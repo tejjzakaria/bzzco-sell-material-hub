@@ -28,7 +28,7 @@ const Header = () => {
                 What do you need?
               </a>
             </nav>
-            <a href=""><Button variant="default" size="sm">
+            <a href="https://www.bzzco.com/become-a-seller"><Button variant="default" size="sm">
               Become a Seller
             </Button></a>
           </div>

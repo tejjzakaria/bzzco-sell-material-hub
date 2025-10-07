@@ -19,9 +19,11 @@ const HeroSection = () => {
           <p className="text-xl text-construction-dark-foreground/90 mb-8 leading-relaxed">
             Join BzzCo's trusted network of suppliers and grow your business.
           </p>
-          <Button variant="hero">
-            Register as a Seller
-          </Button>
+          <a href="https://www.bzzco.com/become-a-seller">
+            <Button variant="hero">
+              Register as a Seller
+            </Button>
+          </a>
         </div>
       </div>
     </section>
