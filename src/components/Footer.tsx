@@ -28,7 +28,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-construction-dark-foreground/80 justify-center">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>Poortland 146, 1046BD Amsterdam</span>
+                <span>Mercuriusplein 1,
+                  2340 Hoofddorp</span>
               </div>
             </div>
           </div>
