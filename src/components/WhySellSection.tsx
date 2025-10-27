@@ -1,5 +1,6 @@
 import { Globe, DollarSign, Package, Headphones } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { FadeInSection, StaggerContainer, StaggerItem } from "./FadeInSection";
 
 const features = [
   {
@@ -28,26 +29,30 @@ const WhySellSection = () => {
   return (
     <section className="py-20 bg-background" id="why-us">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Why Sell with BzzCo</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Join thousands of successful suppliers who trust BzzCo to grow their construction materials business.
-          </p>
-        </div>
+        <FadeInSection>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Why Sell with BzzCo</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Join thousands of successful suppliers who trust BzzCo to grow their construction materials business.
+            </p>
+          </div>
+        </FadeInSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" staggerDelay={0.15}>
           {features.map((feature) => (
-            <Card key={feature.title} className="border-2 hover:border-primary transition-all hover:shadow-brand">
-              <CardContent className="pt-6">
-                <div className="mb-4 inline-flex p-3 bg-primary/10 rounded-lg">
-                  <feature.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-              </CardContent>
-            </Card>
+            <StaggerItem key={feature.title}>
+              <Card className="border-2 hover:border-primary transition-all hover:shadow-brand h-full">
+                <CardContent className="pt-6">
+                  <div className="mb-4 inline-flex p-3 bg-primary/10 rounded-lg">
+                    <feature.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                </CardContent>
+              </Card>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
